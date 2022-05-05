@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "0ac29ba0-16b3-41bf-a3a2-1e6a2b154f93",
+		"name": "posts-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://glacial-inlet-63975.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"glacial-inlet-63975",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"寶可夢大師\",\r\n    \"content\": \"寶可夢大師小智\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://glacial-inlet-63975.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"glacial-inlet-63975",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://glacial-inlet-63975.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"glacial-inlet-63975",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://glacial-inlet-63975.herokuapp.com/posts/123",
+					"protocol": "https",
+					"host": [
+						"glacial-inlet-63975",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"寶可夢大師\",\r\n    \"content\": \"寶可夢大師小智\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://glacial-inlet-63975.herokuapp.com/posts/123",
+					"protocol": "https",
+					"host": [
+						"glacial-inlet-63975",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
