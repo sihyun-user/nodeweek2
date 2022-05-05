@@ -9,12 +9,14 @@ const posts = {
   },
   async createPosts(req, res, body) {
     try {
-      const data = JSON.parse(body);
+      const { name, content } = JSON.parse(body);
+
+      if (!name || !content) throw error
 
       const newPost = await Post.create(
         {
-          name: data.name,
-          content: data.content
+          name: name,
+          content: content
         }
       )
 
@@ -46,15 +48,15 @@ const posts = {
   },
   async updatePosts(req, res, body) {
     try {
-      const data = JSON.parse(body);
+      const { name, content } = JSON.parse(body);
       const id = req.url.split('/').pop();
       const postData = await Post.find({ '_id': id });
 
-      if (postData.length == 0) throw error
+      if ((!name || !content) || postData.length == 0) throw error
       
       await Post.findByIdAndUpdate(id, {
-        name: data.name,
-        content: data.content
+        name: name,
+        content: content
       });
 
       const updatePost = await Post.find({'_id': id })
